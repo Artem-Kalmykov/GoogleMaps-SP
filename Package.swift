@@ -25,16 +25,19 @@ let package = Package(
             ]
         ),
         .library(
-            name: "GoogleMapsM4B",
-            targets: [
-                "GoogleMapsM4B"
-            ]
-        ),
-        .library(
             name: "GooglePlaces",
             targets: [
                 "GooglePlaces",
                 "GoogleMapsBase"
+            ]
+        ),
+        .library(
+            name: "GoogleMapAndPlaces",
+            targets: [
+                "GooglePlaces",
+                "GoogleMapsBase",
+                "GoogleMaps",
+                "GoogleMapsCore"
             ]
         )
     ],
@@ -53,11 +56,6 @@ let package = Package(
             name: "GoogleMapsCore",
             url: "https://github.com/YAtechnologies/GoogleMaps-SP/releases/download/4.1.0/GoogleMapsCore.xcframework.zip",
             checksum: "c255fb0e17a677e1d70df11dc08d40617c2835ac8ab347f92ce194d7c4611e77"
-        ),
-        .binaryTarget(
-            name: "GoogleMapsM4B",
-            url: "https://github.com/YAtechnologies/GoogleMaps-SP/releases/download/4.1.0/GoogleMapsM4B.xcframework.zip",
-            checksum: "c5da70959af76a4333864981976ce6b2280628d3b9e3d89028e88293bcfa0e4a"
         ),
         .binaryTarget(
             name: "GooglePlaces",
